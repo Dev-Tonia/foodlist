@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Food List</string>
+    <string name="french_fries">French Fries</string>
+    <string name="fried_rice">Fried Rice and Chicken</string>
+    <string name="fruit_salad">Fruit Salad</string>
+    <string name="hamburger">Hamburger </string>
+    <string name="sushi">Sushi </string>
+    <string name="jolly_rice">Nigeria Jolly Rice </string>
+    <string name="shawarma">Shawarma </string>
+    <string name="price_shawarma">\u20A6 1500</string>
+    <string name="price_fruit_salad">\u20A6 1000</string>
+    <string name="price_fried_rice">\u20A6 2500</string>
+    <string name="price_hamburger">\u20A6 1200</string>
+    <string name="price_sushi">\u20A6 1000</string>
+    <string name="price_jolly_rice">\u20A6 1800</string>
+    <string name="price_french_fries">\u20A6 1000</string>
+
+</resources>
