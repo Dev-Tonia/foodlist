@@ -1,3 +1,5 @@
 package com.example.foodlist.Model
 
-data class Declaration(val imageResources: Int, val stringResources1: Int, val stringResources2: Int)
+import androidx.annotation.StringRes
+
+data class Declaration(val imageResources: Int, val name: Int, val price: Int, @StringRes val details: Int)

@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/Andorid projects/FoodList/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1655" />
+        <entry key="..\:/Users/HP/Andorid projects/FoodList/app/src/main/res/font/arima_madurai_bold.xml" value="0.20666666666666667" />
+        <entry key="..\:/Users/HP/Andorid projects/FoodList/app/src/main/res/layout/activity_food.xml" value="0.1796875" />
         <entry key="..\:/Users/HP/Andorid projects/FoodList/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Andorid projects/FoodList/app/src/main/res/layout/food_details.xml" value="0.1796875" />
         <entry key="..\:/Users/HP/Andorid projects/FoodList/app/src/main/res/layout/list_item.xml" value="0.1796875" />
+        <entry key="..\:/Users/HP/Andorid projects/FoodList/app/src/main/res/menu/layout_menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/HP/Andorid projects/FoodList/app/src/main/res/menu/menu_layout.xml" value="0.1" />
       </map>
     </option>
   </component>
