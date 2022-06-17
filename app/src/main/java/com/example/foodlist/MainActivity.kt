@@ -5,62 +5,32 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
+import androidx.navigation.NavController
+import androidx.navigation.NavHost
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.foodlist.adapter.ListAdapter
+import com.example.foodlist.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var recyclerView: RecyclerView
-    private val myDataset = com.example.foodlist.data.SourceOfData().displayDeclaration()
-    private var isGridLayoutManager = true
 
+private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-//        recyclerView.adapter = ListAdapter(this, myDataset)
-//        recyclerView.layoutManager = GridLayoutManager(this, 2)
-        recyclerView = findViewById<RecyclerView>(R.id.recreate_item)
-        layoutChoice()
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.fragment_view) as NavHostFragment
+        navController = navHostFragment.navController
+        setupActionBarWithNavController(navController)
 
     }
-    private fun layoutChoice(){
-        if(isGridLayoutManager){
-            recyclerView.layoutManager = GridLayoutManager(this, 2)
-        }else {
-            recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
-        }
-        recyclerView.adapter = ListAdapter(this, myDataset)
-
-        }
-    private fun setIcon(menuItem: MenuItem?){
-        if(menuItem == null) return
-        menuItem.icon =
-            if (isGridLayoutManager)
-                ContextCompat.getDrawable(this, R.drawable.ic_grid_icon)
-            else ContextCompat.getDrawable(this, R.drawable.ic_staggered_icon)
+    override fun onSupportNavigateUp(): Boolean {
+        return  navController.navigateUp() ||super.onSupportNavigateUp()
     }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.layout_menu, menu)
-
-        val layoutButton = menu?.findItem(R.id.action_switch_layout)
-        setIcon(layoutButton)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId){R.id.action_switch_layout -> {
-            isGridLayoutManager = !isGridLayoutManager
-            layoutChoice()
-            setIcon(item)
-
-            return true
-        }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-}
+   }

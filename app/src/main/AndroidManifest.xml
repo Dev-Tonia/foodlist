@@ -10,11 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.myStyle">
         <activity
-            android:name=".FoodActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"
-            />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -47,7 +47,7 @@
             android:layout_marginStart="6dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/price_shawarma"
+            android:text="@string/price_french_fries"
             android:textColor="#2E9261"
             android:textSize="14sp"
             android:textStyle="bold"
